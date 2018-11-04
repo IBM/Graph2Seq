@@ -18,11 +18,11 @@ To train your graph-to-sequence model, you need:
 (2) Modify some hyper-parameters according to your task in the main/configure.py
 
 (3) train the model by running the following code
-    "train -sample_size_per_layer=xxx -sample_layer_size=yyy"
+    "python run_model.py train -sample_size_per_layer=xxx -sample_layer_size=yyy"
     The model that performs the best on the dev data will be saved in the dir "saved_model"
 
 (4) test the model by running the following code
-    "test -sample_size_per_layer=xxx -sample_layer_size=yyy"
+    "python run_model.py test -sample_size_per_layer=xxx -sample_layer_size=yyy"
     The prediction result will be saved in saved_model/prediction.txt
 
 
