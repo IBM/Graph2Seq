@@ -104,7 +104,7 @@ def highway_layer(in_val, output_size, activation_func=tf.tanh, scope=None):
 
 def multi_highway_layer(in_val, output_size, num_layers, activation_func=tf.tanh, scope_name=None, reuse=False):
     with tf.variable_scope(scope_name, reuse=reuse):
-        for i in xrange(num_layers):
+        for i in range(num_layers):
             cur_scope_name = scope_name + "-{}".format(i)
             in_val = highway_layer(in_val, output_size,activation_func=activation_func, scope=cur_scope_name)
     return in_val
